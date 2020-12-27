@@ -1,8 +1,11 @@
 package sqlmanager;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 public class SybaseSQLConnection extends SQLConnection
 {
-    SybaseSQLConnection(){
-        setUrl("asdasd");
+    public SybaseSQLConnection() throws IOException, SQLException {
+        getConnection("urlpostres","","");
     }
 }
