@@ -16,6 +16,10 @@ public class SQLConnection
             con = DriverManager.getConnection(properties.getProperty(url), user, password);
     }
 
+    public Connection getConnection(){
+        return con;
+    }
+
     public ResultSet statementExecuteQuery(String query) throws SQLException {
         ResultSet resultSet = null;
         if (con != null) {
