@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class SQLUtils {
 
-    public static void printDataSet(ResultSet result) throws SQLException {
+    public static void printResultSet(ResultSet result) throws SQLException {
         ResultSetMetaData metaData = result.getMetaData();
         int columnsNumber = metaData.getColumnCount();
 

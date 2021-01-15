@@ -18,7 +18,7 @@ public class MainConsultaPreparada {
             PreparedStatement preparedStatement = sql.getConnection().prepareStatement(query);
             preparedStatement.setInt(1, 14);
             ResultSet resultSet = preparedStatement.executeQuery();
-            SQLUtils.printDataSet(resultSet);
+            SQLUtils.printResultSet(resultSet);
             resultSet.close();
         } catch (IOException | SQLException | ClassNotFoundException e) {
             e.printStackTrace();

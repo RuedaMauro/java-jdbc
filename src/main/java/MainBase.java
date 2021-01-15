@@ -1,11 +1,9 @@
-import sqlmanager.MSSQLConnection;
 import sqlmanager.PostgreSQLConnection;
 import sqlmanager.SQLConnection;
 import utils.SQLUtils;
 
 import java.io.IOException;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 public class MainBase {
@@ -14,8 +12,8 @@ public class MainBase {
         SQLConnection sql = null;
         try {
             sql = new PostgreSQLConnection();
-            ResultSet result = sql.statementExecuteQuery("SELECT * FROM clientes.clientes.clientes");
-            SQLUtils.printDataSet(result);
+            ResultSet result = sql.statementExecuteQuery("SELECT * FROM clientes.clientes.cliente");
+            SQLUtils.printResultSet(result);
         } catch (IOException | SQLException | ClassNotFoundException | NullPointerException e) {
             e.printStackTrace();
         } finally {
